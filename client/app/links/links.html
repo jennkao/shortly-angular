@@ -10,7 +10,7 @@
   <div id='container'>
   <input ng-model='searchText' type='text' />
     <ul>
-      <li ng-repeat='link in data.links | filter: searchText' class="link">
+      <li ng-repeat='link in data.links | filter: searchText | orderBy: "-visits"' class="link">
         <div class='info'>
           <div class='visits'><span class='count'>{{link.visits}}</span>Visits</div>
           <div class='title'>{{link.title}}</div>
