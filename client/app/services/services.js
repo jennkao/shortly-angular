@@ -14,6 +14,7 @@ angular.module('shortly.services', [])
     },
 
     addOne: function(link) {
+      console.log(link);
       return $http.post('/api/links', JSON.stringify(link))
       .then(function(response) {
         return response;
