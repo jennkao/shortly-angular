@@ -5,12 +5,10 @@ angular.module('shortly.links', [])
   $scope.data = {};
 
   $scope.signout = function () {
-    console.log('Auth out');
     Auth.signout();
   };
 
   Links.getAll().then(function(links) {
-    console.log(links);
     $scope.data.links = links;
   });
 });
